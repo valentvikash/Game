@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        background-color: aquamarine;
+        height: 400px;
+        width: 300px;
+        align-items: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        margin-left: 450px;
+        margin-top: 50px;
+    }
+    #btn1{
+        background-color: rgb(189, 71, 38);
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        
+    }
+    #btn2{
+        background-color: azure;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    #btn3{
+        background-color:grey;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+</style>
+<body>
+    <div>
+        <h2>Rock Paper Scissors Game</h2>
+        <button id="btn1" onclick="playgame('rock')">Rock</button>
+        <button id="btn2" onclick="playgame('paper')">Paper</button>
+        <button id="btn3" onclick="playgame('scissors')">Scissors</button>
+        <h2 id="result">choose your move</h2>
+    </div>
+</body>
+<script>
+    
+    function playgame(user){
+        let computer = "rock";
+        if(user == computer){
+            document.getElementById("result").innerHTML="match Draw";
+        }else if(user == "paper"){
+            document.getElementById("result").innerHTML="you win";
+        }else{
+            document.getElementById("result").innerHTML="computer win";
+        }
+    }
+</script>
+</html>
