@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 20px;
+            height: 350px;
+            width: 250px;
+            margin-left: 350px;
+            margin-top: 50px;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+
+        }
+        #number{
+            color: brown;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        #btn{
+            color: blue;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 15px;
+            margin-top: 10px;
+            
+
+        }
+        #btn:hover{
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+        #rslt{
+            color: red;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>this is a Game</h1>
+    <input id="number" placeholder="enter number">
+    <button id="btn" onclick="gusseanumber()">Press the Button</button>
+    <h2 id="rslt">your result</h2>
+    </div>
+</body>
+<script>
+   
+    let ans= Math.floor(Math.random()*10 + 1);
+
+    function gusseanumber(){
+         let ng = Number(document.getElementById("number").value);
+         if(ng == ans){
+            document.getElementById("rslt").innerHTML="You Win";
+         }else{
+            document.getElementById("rslt").innerHTML="You Loss";
+         }
+    }
+    // console.log();
+   
+
+
+</script>
+
+</html>
